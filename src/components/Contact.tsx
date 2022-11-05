@@ -9,7 +9,7 @@ export const Contact = ({ buttonHandler }: Props) => {
       <h2 className="text-3xl tracking-wider">123-4567</h2>
       <button
         onClick={buttonHandler}
-        className="absolute top-0 left-0 w-1/6 h-full bg-neutral-800 opacity-50 z-20"
+        className="absolute top-0 left-0 w-1/6 h-full z-20"
       >
         HOME
       </button>

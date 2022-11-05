@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.left-gradient {
+  background-image: radial-gradient(
+    ellipse 100% 80% at 0% 50%,
+    white,
+    transparent
+  );
+}
+
 .slide-right {
   animation-name: slideRight;
   animation-duration: 0.5s;

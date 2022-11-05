@@ -9,7 +9,7 @@ export const About = ({ buttonHandler }: Props) => {
       <h2 className="text-3xl tracking-wider">you know...</h2>
       <button
         onClick={buttonHandler}
-        className="absolute top-0 right-0 w-1/6 h-full bg-neutral-800 opacity-50 z-20"
+        className="absolute top-0 right-0 w-1/6 h-full z-20"
       >
         HOME
       </button>

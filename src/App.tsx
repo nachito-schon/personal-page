@@ -69,70 +69,72 @@ function App() {
   }
 
   return (
-    <div
-      style={
-        isSlidingRight || isSlidingLeft
-          ? { right: `${window.innerWidth}px` }
-          : isSlidingUp || isSlidingDown
-          ? { bottom: `${window.innerHeight}px` }
-          : {}
-      }
-      className={`flex w-screen h-screen relative bg-neutral-300 ${
-        isSlidingRight ? 'slide-right' : ''
-      }${isSlidingLeft ? 'slide-left' : ''}${
-        isSlidingUp ? 'flex-col slide-up' : ''
-      }${isSlidingDown ? 'flex-col slide-down' : ''}`}
-    >
-      {isAboutOpen ? (
-        <div
-          style={
-            isSlidingRight || isSlidingLeft
-              ? { minWidth: `${window.innerWidth}px` }
-              : { minWidth: '100%' }
-          }
-        >
-          <About buttonHandler={closeAbout} />
-        </div>
-      ) : null}
-      {isHomeOpen ? (
-        <div
-          style={
-            isSlidingRight || isSlidingLeft
-              ? { minWidth: `${window.innerWidth}px` }
-              : isSlidingUp || isSlidingDown
-              ? { minHeight: `${window.innerHeight}px` }
-              : { minWidth: '100%', minHeight: '100%' }
-          }
-        >
-          <Home
-            leftButtonHandler={openAbout}
-            rightButtonHandler={openContact}
-            bottomButtonHandler={openProjects}
-          />
-        </div>
-      ) : null}
-      {isContactOpen ? (
-        <div
-          style={
-            isSlidingRight || isSlidingLeft
-              ? { minWidth: `${window.innerWidth}px` }
-              : { minWidth: '100%' }
-          }
-        >
-          <Contact buttonHandler={closeContact} />
-        </div>
-      ) : null}
-      {isProjectsOpen ? (
-        <div
-          style={
-            isSlidingUp || isSlidingDown
-              ? { minHeight: `${window.innerHeight}px` }
-              : { minHeight: '100%', minWidth: '100%' }
-          }
-        >
-          <Projects buttonHandler={closeProjects} />
-        </div>
-      ) : null}
+    <div className="overflow-hidden">
+      <div
+        style={
+          isSlidingRight || isSlidingLeft
+            ? { right: `${window.innerWidth}px` }
+            : isSlidingUp || isSlidingDown
+            ? { bottom: `${window.innerHeight}px` }
+            : {}
+        }
+        className={`flex w-screen h-screen relative bg-neutral-300 ${
+          isSlidingRight ? 'slide-right' : ''
+        }${isSlidingLeft ? 'slide-left' : ''}${
+          isSlidingUp ? 'flex-col slide-up' : ''
+        }${isSlidingDown ? 'flex-col slide-down' : ''}`}
+      >
+        {isAboutOpen ? (
+          <div
+            style={
+              isSlidingRight || isSlidingLeft
+                ? { minWidth: `${window.innerWidth}px` }
+                : { minWidth: '100%' }
+            }
+          >
+            <About buttonHandler={closeAbout} />
+          </div>
+        ) : null}
+        {isHomeOpen ? (
+          <div
+            style={
+              isSlidingRight || isSlidingLeft
+                ? { minWidth: `${window.innerWidth}px` }
+                : isSlidingUp || isSlidingDown
+                ? { minHeight: `${window.innerHeight}px` }
+                : { minWidth: '100%', minHeight: '100%' }
+            }
+          >
+            <Home
+              leftButtonHandler={openAbout}
+              rightButtonHandler={openContact}
+              bottomButtonHandler={openProjects}
+            />
+          </div>
+        ) : null}
+        {isContactOpen ? (
+          <div
+            style={
+              isSlidingRight || isSlidingLeft
+                ? { minWidth: `${window.innerWidth}px` }
+                : { minWidth: '100%' }
+            }
+          >
+            <Contact buttonHandler={closeContact} />
+          </div>
+        ) : null}
+        {isProjectsOpen ? (
+          <div
+            style={
+              isSlidingUp || isSlidingDown
+                ? { minHeight: `${window.innerHeight}px` }
+                : { minHeight: '100%', minWidth: '100%' }
+            }
+          >
+            <Projects buttonHandler={closeProjects} />
+          </div>
+        ) : null}
+      </div>
     </div>
   )
 }
