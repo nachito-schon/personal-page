@@ -20,7 +20,7 @@ function App() {
     setTimeout(() => {
       setIsSlidingRight(false)
       setIsHomeOpen(false)
-    }, 500)
+    }, 750)
   }
 
   const closeAbout = () => {
@@ -29,7 +29,7 @@ function App() {
     setTimeout(() => {
       setIsSlidingLeft(false)
       setIsAboutOpen(false)
-    }, 500)
+    }, 750)
   }
 
   const openContact = () => {
@@ -38,7 +38,7 @@ function App() {
     setTimeout(() => {
       setIsSlidingLeft(false)
       setIsHomeOpen(false)
-    }, 500)
+    }, 750)
   }
 
   const closeContact = () => {
@@ -47,7 +47,7 @@ function App() {
     setTimeout(() => {
       setIsSlidingRight(false)
       setIsContactOpen(false)
-    }, 500)
+    }, 750)
   }
 
   const openProjects = () => {
@@ -56,7 +56,7 @@ function App() {
     setTimeout(() => {
       setIsSlidingUp(false)
       setIsHomeOpen(false)
-    }, 500)
+    }, 750)
   }
 
   const closeProjects = () => {
@@ -65,7 +65,7 @@ function App() {
     setTimeout(() => {
       setIsSlidingDown(false)
       setIsProjectsOpen(false)
-    }, 500)
+    }, 750)
   }
 
   return (

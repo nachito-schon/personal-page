@@ -4,7 +4,31 @@
 
 .left-gradient {
   background-image: radial-gradient(
-    ellipse 100% 80% at 0% 50%,
+    ellipse 100% 60% at 0% 50%,
+    white,
+    transparent
+  );
+}
+
+.right-gradient {
+  background-image: radial-gradient(
+    ellipse 100% 60% at 100% 50%,
+    white,
+    transparent
+  );
+}
+
+.bottom-gradient {
+  background-image: radial-gradient(
+    ellipse 50% 100% at 50% 100%,
+    white,
+    transparent
+  );
+}
+
+.top-gradient {
+  background-image: radial-gradient(
+    ellipse 50% 100% at 50% 0%,
     white,
     transparent
   );
@@ -12,7 +36,7 @@
 
 .slide-right {
   animation-name: slideRight;
-  animation-duration: 0.5s;
+  animation-duration: 0.75s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
@@ -28,7 +52,7 @@
 
 .slide-left {
   animation-name: slideLeft;
-  animation-duration: 0.5s;
+  animation-duration: 0.75s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
@@ -44,7 +68,7 @@
 
 .slide-up {
   animation-name: slideUp;
-  animation-duration: 0.5s;
+  animation-duration: 0.75s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
@@ -60,7 +84,7 @@
 
 .slide-down {
   animation-name: slideDown;
-  animation-duration: 0.5s;
+  animation-duration: 0.75s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
