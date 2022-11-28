@@ -1,0 +1,1 @@
+- I'm creative, I appreciate art in most of its forms, fact which often finds subtly its way into my work. / Web development allows me to be creative, finding clever and efficient solutions to logic problems, styling of an app's layout.

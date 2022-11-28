@@ -2,12 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Rubik Mono One';
+  src: url(./fonts/Rubik_Mono_One/RubikMonoOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Play Regular';
+  src: url(./fonts/Play/Play-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Play Bold';
+  src: url(./fonts/Play/Play-Bold.ttf);
+}
+
 .left-gradient {
   background-image: radial-gradient(
     ellipse 100% 60% at 0% 50%,
     white,
     transparent
   );
+  opacity: 0.2;
 }
 
 .right-gradient {
@@ -16,6 +32,7 @@
     white,
     transparent
   );
+  opacity: 0.2;
 }
 
 .bottom-gradient {
@@ -24,6 +41,7 @@
     white,
     transparent
   );
+  opacity: 0.2;
 }
 
 .top-gradient {
@@ -32,6 +50,7 @@
     white,
     transparent
   );
+  opacity: 0.2;
 }
 
 .slide-right {

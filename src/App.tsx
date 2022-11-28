@@ -69,7 +69,7 @@ function App() {
   }
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden bg-black">
       <div
         style={
           isSlidingRight || isSlidingLeft
@@ -78,7 +78,7 @@ function App() {
             ? { bottom: `${window.innerHeight}px` }
             : {}
         }
-        className={`flex w-screen h-screen relative bg-neutral-300 ${
+        className={`flex w-screen h-screen relative font-play ${
           isSlidingRight ? 'slide-right' : ''
         }${isSlidingLeft ? 'slide-left' : ''}${
           isSlidingUp ? 'flex-col slide-up' : ''
@@ -92,7 +92,7 @@ function App() {
                 : { minWidth: '100%' }
             }
           >
-            <About buttonHandler={closeAbout} />
+            <About buttonHandler={closeAbout} isSliding={isHomeOpen} />
           </div>
         ) : null}
         {isHomeOpen ? (
@@ -109,6 +109,9 @@ function App() {
               leftButtonHandler={openAbout}
               rightButtonHandler={openContact}
               bottomButtonHandler={openProjects}
+              isOpeningAbout={isAboutOpen}
+              isOpeningProjects={isProjectsOpen}
+              isOpeningContact={isContactOpen}
             />
           </div>
         ) : null}
@@ -120,7 +123,7 @@ function App() {
                 : { minWidth: '100%' }
             }
           >
-            <Contact buttonHandler={closeContact} />
+            <Contact buttonHandler={closeContact} isSliding={isHomeOpen} />
           </div>
         ) : null}
         {isProjectsOpen ? (
@@ -131,7 +134,7 @@ function App() {
                 : { minHeight: '100%', minWidth: '100%' }
             }
           >
-            <Projects buttonHandler={closeProjects} />
+            <Projects buttonHandler={closeProjects} isSliding={isHomeOpen} />
           </div>
         ) : null}
       </div>
