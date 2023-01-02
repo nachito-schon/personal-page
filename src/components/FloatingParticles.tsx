@@ -25,9 +25,9 @@ export const FloatingParticles = ({ orientation = 'bottom' }: Props) => {
       const context = canvas.getContext('2d')
       if (context) {
         const particles = [] as ReturnType<typeof makeFloatingParticle>[]
-        const TOTAL_PARTICLES = 10
-        const PERCENTAGE_OF_TYPE_2 = 45
-        const PERCENTAGE_OF_TYPE_3 = 30
+        const TOTAL_PARTICLES = 6
+        const PERCENTAGE_OF_TYPE_2 = 40
+        const PERCENTAGE_OF_TYPE_3 = 40
         for (let index = 0; index < TOTAL_PARTICLES; index += 1) {
           if (index / TOTAL_PARTICLES < PERCENTAGE_OF_TYPE_3 / 100) {
             particles.push(
@@ -35,9 +35,7 @@ export const FloatingParticles = ({ orientation = 'bottom' }: Props) => {
                 canvas,
                 context,
                 3,
-                orientation === 'top' || orientation === 'bottom'
-                  ? 'vertical'
-                  : 'horizontal',
+                orientation,
                 100 * Math.random(),
                 100 * Math.random()
               )
@@ -48,9 +46,7 @@ export const FloatingParticles = ({ orientation = 'bottom' }: Props) => {
                 canvas,
                 context,
                 2,
-                orientation === 'top' || orientation === 'bottom'
-                  ? 'vertical'
-                  : 'horizontal',
+                orientation,
                 100 * Math.random(),
                 100 * Math.random()
               )
@@ -61,9 +57,7 @@ export const FloatingParticles = ({ orientation = 'bottom' }: Props) => {
                 canvas,
                 context,
                 1,
-                orientation === 'top' || orientation === 'bottom'
-                  ? 'vertical'
-                  : 'horizontal',
+                orientation,
                 100 * Math.random(),
                 100 * Math.random()
               )
@@ -71,10 +65,6 @@ export const FloatingParticles = ({ orientation = 'bottom' }: Props) => {
           }
         }
 
-        if (orientation === 'top' || orientation === 'left') {
-          context.translate(canvas.width, canvas.height)
-          context.scale(-1, -1)
-        }
         const drawFrame = () => {
           context.clearRect(0, 0, canvas.width, canvas.height)
           particles.forEach((particle) => {
@@ -87,8 +77,10 @@ export const FloatingParticles = ({ orientation = 'bottom' }: Props) => {
                   : canvas.height * Math.random()
             }
           })
+
           window.requestAnimationFrame(drawFrame)
         }
+
         window.requestAnimationFrame(drawFrame)
       }
     }

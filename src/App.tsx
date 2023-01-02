@@ -69,7 +69,7 @@ function App() {
   }
 
   return (
-    <div className="overflow-hidden bg-black">
+    <div className="overflow-hidden bg-dark-green">
       <div
         style={
           isSlidingRight || isSlidingLeft
@@ -78,7 +78,7 @@ function App() {
             ? { bottom: `${window.innerHeight}px` }
             : {}
         }
-        className={`flex w-screen h-screen relative font-play ${
+        className={`flex w-screen h-screen relative font-sans font-thin ${
           isSlidingRight ? 'slide-right' : ''
         }${isSlidingLeft ? 'slide-left' : ''}${
           isSlidingUp ? 'flex-col slide-up' : ''

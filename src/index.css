@@ -4,17 +4,24 @@
 
 @font-face {
   font-family: 'Rubik Mono One';
-  src: url(./fonts/Rubik_Mono_One/RubikMonoOne-Regular.ttf);
+  src: url(./fonts/Rubik_Mono_One/RubikMonoOne-Regular.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Play Regular';
-  src: url(./fonts/Play/Play-Regular.ttf);
+  src: url(./fonts/Play/Play-Regular.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Play Bold';
-  src: url(./fonts/Play/Play-Bold.ttf);
+  src: url(./fonts/Play/Play-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(./fonts/Roboto/Roboto-Thin.ttf) format('truetype');
+  font-weight: thin;
+  font-style: normal;
 }
 
 .left-gradient {

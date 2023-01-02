@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import { useSwipeable } from 'react-swipeable'
 import { BorderLightButton } from './BorderLightButton'
+import { Title } from './Title'
 
 type Props = {
   leftButtonHandler: () => void
@@ -24,15 +26,29 @@ export const Home = ({
     onSwipedUp: bottomButtonHandler,
   })
 
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+    setMousePosition({
+      x: Math.round(event.clientX - window.innerWidth / 2),
+      y: Math.round(event.clientY - window.innerHeight / 2),
+    })
+  }
+
   return (
     <div
       className="h-full flex flex-col relative justify-center gap-3 text-center text-white select-none"
       {...swipeHandlers}
+      onMouseMove={handleMouseMove}
     >
-      <h1 className="text-7xl tracking-wide ">Ignacio Schonfeld</h1>
-      <h2 className="text-4xl font-play-bold tracking-widest">
-        FRONT-END DEVELOPER
-      </h2>
+      <Title
+        style={{
+          position: 'relative',
+          top: -mousePosition.y / 50,
+          left: -mousePosition.x / 50,
+        }}
+        title="Ignacio Schonfeld"
+        subtitle="FRONT-END DEVELOPER"
+      />
       <BorderLightButton
         text="ABOUT ME"
         position="left"
