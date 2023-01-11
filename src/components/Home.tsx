@@ -43,8 +43,8 @@ export const Home = ({
       <Title
         style={{
           position: 'relative',
-          top: -mousePosition.y / 50,
-          left: -mousePosition.x / 50,
+          top: -mousePosition.y / 75,
+          left: -mousePosition.x / 75,
         }}
         title="Ignacio Schonfeld"
         subtitle="FRONT-END DEVELOPER"

@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useRef } from 'react'
 import { makeFadeInTitle } from '../lib/canvas'
+import { debounce } from '../lib/events'
 
 type Props = {
   title: string
@@ -30,16 +31,22 @@ export const Title = ({ title, subtitle, style }: Props) => {
   }
 
   useLayoutEffect(() => {
-    window.addEventListener('resize', () => {
-      updateSize()
-      draw()
-    })
-
-    return () =>
-      window.removeEventListener('resize', () => {
+    window.addEventListener(
+      'resize',
+      debounce(() => {
         updateSize()
         draw()
-      })
+      }, 1000)
+    )
+
+    return () =>
+      window.removeEventListener(
+        'resize',
+        debounce(() => {
+          updateSize()
+          draw()
+        }, 1000)
+      )
   }, [])
 
   useEffect(() => {

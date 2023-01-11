@@ -78,7 +78,7 @@ function App() {
             ? { bottom: `${window.innerHeight}px` }
             : {}
         }
-        className={`flex w-screen h-screen relative font-sans font-thin ${
+        className={`flex w-screen h-screen relative font-sans font-thin selection:bg-bright-green selection:text-black ${
           isSlidingRight ? 'slide-right' : ''
         }${isSlidingLeft ? 'slide-left' : ''}${
           isSlidingUp ? 'flex-col slide-up' : ''

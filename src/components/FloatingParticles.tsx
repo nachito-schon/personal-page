@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useRef } from 'react'
 import { makeFloatingParticle } from '../lib/canvas'
+import { debounce } from '../lib/events'
 
 type Props = { orientation?: 'top' | 'right' | 'bottom' | 'left' }
 
@@ -14,8 +15,9 @@ export const FloatingParticles = ({ orientation = 'bottom' }: Props) => {
   }
 
   useLayoutEffect(() => {
-    window.addEventListener('resize', updateSize)
-    return () => window.removeEventListener('resize', updateSize)
+    window.addEventListener('resize', debounce(updateSize, 1000))
+    return () =>
+      window.removeEventListener('resize', debounce(updateSize, 1000))
   }, [])
 
   useEffect(() => {
