@@ -43,8 +43,11 @@ export const Home = ({
       <Title
         style={{
           position: 'relative',
-          top: -mousePosition.y / 75,
-          left: -mousePosition.x / 75,
+          top: -mousePosition.y / 50,
+          left: -mousePosition.x / 50,
+          transitionProperty: 'top, left',
+          transitionDuration: '1s',
+          transitionTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
         }}
         title="Ignacio Schonfeld"
         subtitle="FRONT-END DEVELOPER"
