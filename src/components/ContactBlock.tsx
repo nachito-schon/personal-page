@@ -26,10 +26,10 @@ export const ContactBlock = ({ url, title, className, text }: Props) => {
       />
       <div className="h-10 overflow-hidden">
         <div className="relative -top-10 group-hover:top-2 transition-all duration-300 ease-in-out">
-          <h1 className="h-10 font-play-bold text-2xl text-bright-green">
+          <h1 className="h-10 font-play-bold text-2xl text-bright-blue">
             {text || url}
           </h1>
-          <h1 className="h-10 font-play-bold text-4xl text-bright-blue select-none">
+          <h1 className="h-10 font-play-bold text-4xl text-bright-green select-none">
             {title}
           </h1>
         </div>
