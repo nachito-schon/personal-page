@@ -1,3 +1,6 @@
+import { useContext } from 'react'
+import { GOATS_URL, THE_ODIN_PROJECT_URL } from '../constants/settings'
+import { LanguageContext } from '../context/LanguageContext'
 import { BorderLightButton } from './BorderLightButton'
 
 type Props = {
@@ -6,74 +9,69 @@ type Props = {
 }
 
 export const About = ({ buttonHandler, isSliding }: Props) => {
+  const dictionary = useContext(LanguageContext).dictionary
+
   return (
     <div className="h-full overflow-auto">
       <div className="w-3/5 m-auto my-24 flex flex-col relative justify-center gap-3 text-justify indent-12 leading-normal text-white text-3xl tracking-wide">
         <h1 className="pt-12 pb-2 self-start indent-0 text-5xl font-play-bold text-bright-green selection:text-white">
-          Hi!
+          {dictionary.about.introduction.HEADER}
         </h1>
         <p>
-          My name is Ignacio. I am an{' '}
+          {dictionary.about.introduction.TEXT[0]}
           <span className="font-play-bold text-bright-green selection:text-white">
-            argentinian
-          </span>{' '}
-          developer looking to start my professional career in web development.
-        </p>
-        <h1 className="pt-12 pb-2 self-start indent-0 text-5xl font-play-bold text-bright-green selection:text-white">
-          My experience
-        </h1>
-        <p>
-          I first got into{' '}
-          <span className="font-play-bold text-bright-green selection:text-white">
-            programming
-          </span>{' '}
-          in college, as I was studying electronic engineering. I learned the
-          basics of algorithms, databases and C language, and really enjoyed the
-          logic process of writing code.
-        </p>
-        <p>
-          Eventually, I found out about web development and started following{' '}
-          <a
-            href="https://www.theodinproject.com/"
-            target={'_blank'}
-            className="font-play-bold text-bright-blue hover:text-light-bright-blue hover:underline decoration-4 underline-offset-4 selection:text-white"
-            rel="noreferrer"
-          >
-            The Odin Project
-          </a>
-          's curriculum.
-        </p>
-        <p>
-          Later on in my learning course, I got into a project as part of a
-          small team. As the only developer, I helped bringing a{' '}
-          <a
-            href="https://goats-game.com/"
-            target={'_blank'}
-            className="font-play-bold text-bright-blue hover:text-light-bright-blue hover:underline decoration-4 underline-offset-4 selection:text-white"
-            rel="noreferrer"
-          >
-            web-based game
-          </a>{' '}
-          with more than a thousand visits per day to reality.
-        </p>
-        <h1 className="pt-12 pb-2 self-start indent-0 text-5xl font-play-bold text-bright-green selection:text-white">
-          Motivations
-        </h1>
-        <p>
-          I'm a creative, I am passionate about art in most of its forms, fact
-          which often subtly finds, in one way or another, its way into my work.
-        </p>
-        <p>
-          Web development allows me to express this{' '}
-          <span className="font-play-bold text-bright-green selection:text-white">
-            creativity
+            {dictionary.about.introduction.HIGHLIGHTED_TEXT}
           </span>
-          , be it by finding clever and efficient solutions to logic problems,
-          or through the styling of an app's layout.
+          {dictionary.about.introduction.TEXT[1]}
+        </p>
+        <h1 className="pt-12 pb-2 self-start indent-0 text-5xl font-play-bold text-bright-green selection:text-white">
+          {dictionary.about.experience.HEADER}
+        </h1>
+        <p>
+          {dictionary.about.experience.TEXT[0]}
+          <span className="font-play-bold text-bright-green selection:text-white">
+            {dictionary.about.experience.HIGHLIGHTED_TEXT}
+          </span>
+          {dictionary.about.experience.TEXT[1]}
+        </p>
+        <p>
+          {dictionary.about.experience.TEXT[2]}
+          <a
+            href={THE_ODIN_PROJECT_URL}
+            target={'_blank'}
+            className="font-play-bold text-bright-blue hover:text-light-bright-blue hover:underline decoration-4 underline-offset-4 selection:text-white"
+            rel="noreferrer"
+          >
+            {dictionary.about.experience.LINK[0]}
+          </a>
+          {dictionary.about.experience.TEXT[3]}
+        </p>
+        <p>
+          {dictionary.about.experience.TEXT[4]}
+          <a
+            href={GOATS_URL}
+            target={'_blank'}
+            className="font-play-bold text-bright-blue hover:text-light-bright-blue hover:underline decoration-4 underline-offset-4 selection:text-white"
+            rel="noreferrer"
+          >
+            {dictionary.about.experience.LINK[1]}
+          </a>
+          {dictionary.about.experience.TEXT[5]}
+        </p>
+        <h1 className="pt-12 pb-2 self-start indent-0 text-5xl font-play-bold text-bright-green selection:text-white">
+          {dictionary.about.motivations.HEADER}
+        </h1>
+        <p>{dictionary.about.motivations.TEXT[0]}</p>
+        <p>
+          {dictionary.about.motivations.TEXT[1]}
+          <span className="font-play-bold text-bright-green selection:text-white">
+            {dictionary.about.motivations.HIGHLIGHTED_TEXT}
+          </span>
+          {dictionary.about.motivations.TEXT[2]}
         </p>
       </div>
       <BorderLightButton
-        text="HOME"
+        text={dictionary.navButtons.HOME}
         position="right"
         isActive={isSliding}
         onClick={buttonHandler}

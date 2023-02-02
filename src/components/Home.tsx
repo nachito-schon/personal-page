@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { useSwipeable } from 'react-swipeable'
+import { LanguageContext } from '../context/LanguageContext'
 import { BorderLightButton } from './BorderLightButton'
 import { Title } from './Title'
 
@@ -20,12 +21,12 @@ export const Home = ({
   isOpeningProjects,
   isOpeningContact,
 }: Props) => {
+  const dictionary = useContext(LanguageContext).dictionary
   const swipeHandlers = useSwipeable({
     onSwipedRight: leftButtonHandler,
     onSwipedLeft: rightButtonHandler,
     onSwipedUp: bottomButtonHandler,
   })
-
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     setMousePosition({
@@ -50,22 +51,22 @@ export const Home = ({
           transitionTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
         }}
         title="Ignacio Schonfeld"
-        subtitle="FRONT-END DEVELOPER"
+        subtitle={dictionary.SUBTITLE}
       />
       <BorderLightButton
-        text="ABOUT ME"
+        text={dictionary.navButtons.ABOUT}
         position="left"
         isActive={isOpeningAbout}
         onClick={leftButtonHandler}
       />
       <BorderLightButton
-        text="PROJECTS"
+        text={dictionary.navButtons.PROJECTS}
         position="bottom"
         isActive={isOpeningProjects}
         onClick={bottomButtonHandler}
       />
       <BorderLightButton
-        text="CONTACT"
+        text={dictionary.navButtons.CONTACT}
         position="right"
         isActive={isOpeningContact}
         onClick={rightButtonHandler}

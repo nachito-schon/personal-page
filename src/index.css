@@ -123,3 +123,13 @@
     transform: translateY(100%);
   }
 }
+
+.language-flag {
+  background: linear-gradient(
+    to right,
+    transparent,
+    white 30%,
+    white 70%,
+    transparent
+  );
+}
