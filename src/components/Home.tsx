@@ -21,6 +21,7 @@ export const Home = ({
   isOpeningProjects,
   isOpeningContact,
 }: Props) => {
+  const language = useContext(LanguageContext).userLanguage
   const dictionary = useContext(LanguageContext).dictionary
   const swipeHandlers = useSwipeable({
     onSwipedRight: leftButtonHandler,
@@ -52,6 +53,7 @@ export const Home = ({
         }}
         title="Ignacio Schonfeld"
         subtitle={dictionary.SUBTITLE}
+        language={language}
       />
       <BorderLightButton
         text={dictionary.navButtons.ABOUT}

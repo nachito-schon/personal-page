@@ -1,3 +1,4 @@
+import { Language } from '../constants/languages/dictionary'
 import { getRandomSequence } from './math'
 
 const drawBall = (
@@ -148,7 +149,8 @@ export const makeFadeInTitle = (
   canvas: HTMLCanvasElement,
   context: CanvasRenderingContext2D,
   titleText: string,
-  subtitleText: string
+  subtitleText: string,
+  language: Language
 ) => {
   const title = {
     text: titleText,
@@ -162,7 +164,7 @@ export const makeFadeInTitle = (
       character,
       opacity: -0.5 - 0.1 * randomSequence[index],
     })),
-    size: title.size / 2,
+    size: language === 'en' ? title.size / 2 : title.size / 2.55,
   }
   const drawFrame = () => {
     context.clearRect(0, 0, canvas.width, canvas.height)

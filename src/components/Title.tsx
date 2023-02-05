@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect, useRef } from 'react'
+import { Language } from '../constants/languages/dictionary'
 import { makeFadeInTitle } from '../lib/canvas'
 import { debounce } from '../lib/events'
 
@@ -6,9 +7,10 @@ type Props = {
   title: string
   subtitle: string
   style?: React.CSSProperties
+  language: Language
 }
 
-export const Title = ({ title, subtitle, style }: Props) => {
+export const Title = ({ title, subtitle, style, language }: Props) => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const updateSize = () => {
     const canvas = canvasRef.current
@@ -24,7 +26,7 @@ export const Title = ({ title, subtitle, style }: Props) => {
       if (canvas) {
         const context = canvas.getContext('2d')
         if (context) {
-          makeFadeInTitle(canvas, context, title, subtitle)
+          makeFadeInTitle(canvas, context, title, subtitle, language)
         }
       }
     })
@@ -52,7 +54,7 @@ export const Title = ({ title, subtitle, style }: Props) => {
   useEffect(() => {
     updateSize()
     draw()
-  }, [])
+  }, [title, subtitle])
 
   return (
     <canvas style={style} className="m-auto" ref={canvasRef}>

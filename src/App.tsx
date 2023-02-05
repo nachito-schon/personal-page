@@ -81,7 +81,7 @@ function App() {
               ? { bottom: `${window.innerHeight}px` }
               : {}
           }
-          className={`flex w-screen h-screen relative font-sans font-thin selection:bg-bright-green selection:text-black ${
+          className={`flex w-screen h-screen relative font-sans font-bold 2xl:font-thin selection:bg-bright-green selection:text-black ${
             isSlidingRight ? 'slide-right' : ''
           }${isSlidingLeft ? 'slide-left' : ''}${
             isSlidingUp ? 'flex-col slide-up' : ''
@@ -141,7 +141,7 @@ function App() {
             </div>
           ) : null}
         </div>
-        <LanguageSelector className="fixed top-0 right-0 mt-12 mr-24 z-50" />
+        <LanguageSelector className="fixed top-0 right-0 mt-3 mr-6 md:mt-6 md:mr-12 xl:mt-12 xl:mr-24 z-50" />
       </div>
     </LanguageProvider>
   )

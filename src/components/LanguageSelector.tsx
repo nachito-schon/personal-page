@@ -32,21 +32,23 @@ export const LanguageSelector = ({ className }: Props) => {
     setFlagPosition(userLanguage)
   }
 
-  const flagClassName = `language-flag h-full w-12 duration-700 ease-in-out ${
-    flagPosition === 'en' ? '-translate-x-4' : 'translate-x-4'
+  const flagClassName = `language-flag h-full w-6 xl:w-12 duration-700 ease-in-out ${
+    flagPosition === 'en'
+      ? '-translate-x-2 xl:-translate-x-4'
+      : 'translate-x-2 xl:translate-x-4'
   }`
 
-  const englishButtonClassName = `${
+  const englishButtonClassName = `p-3 ${
     flagPosition === 'en' ? '' : 'opacity-40 hover:opacity-100'
   } duration-700 ease-in-out`
 
-  const spanishButtonClassName = `${
+  const spanishButtonClassName = `p-3 ${
     flagPosition === 'es' ? '' : 'opacity-40 hover:opacity-100'
   } duration-700 ease-in-out`
 
   return (
     <div
-      className={`flex justify-between items-center gap-3 text-white text-3xl ${className}`}
+      className={`flex justify-between items-center font-bold 2xl:font-thin text-white text-2xl lg:text-3xl ${className}`}
     >
       <button
         className={englishButtonClassName}
@@ -56,7 +58,7 @@ export const LanguageSelector = ({ className }: Props) => {
       >
         EN
       </button>
-      <div className="h-px w-12 grow overflow-hidden">
+      <div className="h-px w-6 xl:w-12 grow overflow-hidden">
         <div className={flagClassName}></div>
       </div>
       <button
