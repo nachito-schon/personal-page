@@ -44,7 +44,13 @@ export const BorderLightButton = ({
         </div>
       </div>
       <button
-        className="w-full h-full md:text-xl lg:text-2xl 2xl:text-3xl text-white opacity-30 group-hover:opacity-100 transition-opacity duration-500"
+        className={`w-full h-full md:text-xl lg:text-2xl 2xl:text-3xl text-white opacity-30 group-hover:opacity-100 transition-opacity duration-500 ${
+          position === 'left'
+            ? 'left-nav-button'
+            : position === 'right'
+            ? 'right-nav-button'
+            : ''
+        }`}
         style={isActive ? { opacity: '1' } : {}}
       >
         {text}

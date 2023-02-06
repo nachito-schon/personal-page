@@ -145,7 +145,7 @@ export const makeFloatingParticle = (
         },
       }
 
-export const makeFadeInTitle = (
+export const makeTitleAnimation = (
   canvas: HTMLCanvasElement,
   context: CanvasRenderingContext2D,
   titleText: string,
@@ -158,6 +158,7 @@ export const makeFadeInTitle = (
     blur: 15,
     opacity: 0,
   }
+
   const randomSequence = getRandomSequence(subtitleText.length)
   const subtitle = {
     characters: subtitleText.split('').map((character, index) => ({
@@ -166,6 +167,7 @@ export const makeFadeInTitle = (
     })),
     size: language === 'en' ? title.size / 2 : title.size / 2.55,
   }
+
   const drawFrame = () => {
     context.clearRect(0, 0, canvas.width, canvas.height)
     context.fillStyle = `rgba(255, 255, 255, ${title.opacity})`
@@ -175,9 +177,11 @@ export const makeFadeInTitle = (
     if (title.blur > 0) {
       title.blur -= 0.15
     }
+
     if (title.opacity < 1) {
       title.opacity += 0.02
     }
+
     context.filter = 'none'
     context.font = `${subtitle.size}px Play Bold`
     subtitle.characters.reduce((offset, char) => {

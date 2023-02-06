@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useRef } from 'react'
 import { Language } from '../constants/languages/dictionary'
-import { makeFadeInTitle } from '../lib/canvas'
+import { makeTitleAnimation } from '../lib/canvas'
 import { debounce } from '../lib/events'
 
 type Props = {
@@ -26,7 +26,7 @@ export const Title = ({ title, subtitle, style, language }: Props) => {
       if (canvas) {
         const context = canvas.getContext('2d')
         if (context) {
-          makeFadeInTitle(canvas, context, title, subtitle, language)
+          makeTitleAnimation(canvas, context, title, subtitle, language)
         }
       }
     })

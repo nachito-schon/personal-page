@@ -133,3 +133,13 @@
     transparent
   );
 }
+
+@media (max-width: 768px) {
+  .left-nav-button {
+    writing-mode: sideways-rl;
+  }
+
+  .right-nav-button {
+    writing-mode: sideways-lr;
+  }
+}
