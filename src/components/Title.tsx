@@ -16,7 +16,7 @@ export const Title = ({ title, subtitle, style, language }: Props) => {
     const canvas = canvasRef.current
     if (canvas && canvas.parentElement) {
       canvas.width = Math.round(canvas.parentElement.clientWidth / 2)
-      canvas.height = Math.round(canvas.width / 4)
+      canvas.height = canvas.width
     }
   }
 

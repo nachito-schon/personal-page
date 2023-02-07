@@ -154,9 +154,35 @@ export const makeTitleAnimation = (
 ) => {
   const title = {
     text: titleText,
-    size: Math.round(canvas.height / 2.1),
+    splitText: titleText.split(' '),
+    size: Math.round(canvas.height / 8.4),
     blur: 15,
     opacity: 0,
+    draw: () => {
+      context.fillStyle = `rgba(255, 255, 255, ${title.opacity})`
+      context.filter = `blur(${title.blur}px)`
+      if (canvas.width > 500) {
+        context.font = `${title.size}px Roboto`
+        context.fillText(title.text, 0, Math.round(canvas.height / 2))
+      } else {
+        context.font = `${title.size * 1.7}px Roboto`
+        context.fillText(
+          title.splitText[0],
+          0,
+          Math.round(canvas.height / 2) - title.size * 1.7
+        )
+        context.fillText(title.splitText[1], 0, Math.round(canvas.height / 2))
+      }
+    },
+    update: () => {
+      if (title.blur > 0) {
+        title.blur -= 0.15
+      }
+
+      if (title.opacity < 1) {
+        title.opacity += 0.02
+      }
+    },
   }
 
   const randomSequence = getRandomSequence(subtitleText.length)
@@ -165,46 +191,94 @@ export const makeTitleAnimation = (
       character,
       opacity: -0.5 - 0.1 * randomSequence[index],
     })),
+    splitCharacters: subtitleText.split(' ').map((word) =>
+      word.split('').map((character, index) => ({
+        character,
+        opacity: -0.5 - 0.1 * randomSequence[index],
+      }))
+    ),
     size: language === 'en' ? title.size / 2 : title.size / 2.55,
+    draw: () => {
+      context.filter = 'none'
+      if (canvas.width > 500) {
+        context.font = `${subtitle.size}px Play Bold`
+        subtitle.characters.reduce((offset, char) => {
+          context.fillStyle = `rgba(30, 255, 97, ${char.opacity})`
+          context.fillText(
+            char.character,
+            Math.round(canvas.width / 6) + offset,
+            Math.round(canvas.height / 1.92 + subtitle.size)
+          )
+          return (
+            offset +
+            context.measureText(char.character).width +
+            canvas.width / 150
+          )
+        }, 0)
+      } else {
+        context.font = `${subtitle.size * 1.5}px Play Bold`
+        subtitle.splitCharacters[0].reduce((offset, char) => {
+          context.fillStyle = `rgba(30, 255, 97, ${char.opacity})`
+          context.fillText(
+            char.character,
+            Math.round(canvas.width / 4) + offset,
+            Math.round(canvas.height / 1.75 + subtitle.size)
+          )
+          return (
+            offset +
+            context.measureText(char.character).width +
+            canvas.width / 150
+          )
+        }, 0)
+
+        subtitle.splitCharacters[1].reduce((offset, char) => {
+          context.fillStyle = `rgba(30, 255, 97, ${char.opacity})`
+          context.fillText(
+            char.character,
+            Math.round(canvas.width / 4) + offset,
+            Math.round(canvas.height / 1.75 + subtitle.size * 2.8)
+          )
+          return (
+            offset +
+            context.measureText(char.character).width +
+            canvas.width / 150
+          )
+        }, 0)
+      }
+    },
+    update: () => {
+      if (canvas.width > 500) {
+        subtitle.characters.forEach((char) => {
+          if (char.opacity < 1) {
+            char.opacity += 0.01
+          }
+        })
+      } else {
+        subtitle.splitCharacters.forEach((word) =>
+          word.forEach((char) => {
+            if (char.opacity < 1) {
+              char.opacity += 0.01
+            }
+          })
+        )
+      }
+    },
   }
 
   const drawFrame = () => {
     context.clearRect(0, 0, canvas.width, canvas.height)
-    context.fillStyle = `rgba(255, 255, 255, ${title.opacity})`
-    context.filter = `blur(${title.blur}px)`
-    context.font = `${title.size}px Roboto`
-    context.fillText(title.text, 0, Math.round(canvas.height / 2))
-    if (title.blur > 0) {
-      title.blur -= 0.15
-    }
-
-    if (title.opacity < 1) {
-      title.opacity += 0.02
-    }
-
-    context.filter = 'none'
-    context.font = `${subtitle.size}px Play Bold`
-    subtitle.characters.reduce((offset, char) => {
-      context.fillStyle = `rgba(30, 255, 97, ${char.opacity})`
-      context.fillText(
-        char.character,
-        Math.round(canvas.width / 6) + offset,
-        Math.round(canvas.height / 1.75 + subtitle.size)
-      )
-      if (char.opacity < 1) {
-        char.opacity += 0.01
-      }
-
-      return (
-        offset + context.measureText(char.character).width + canvas.width / 150
-      )
-    }, 0)
-
-    if (
-      title.blur > 0 ||
-      title.opacity < 1 ||
-      subtitle.characters.some((char) => char.opacity < 1)
-    ) {
+    title.draw()
+    title.update()
+    subtitle.draw()
+    subtitle.update()
+    const isAnimationComplete =
+      title.blur <= 0 &&
+      title.opacity >= 1 &&
+      (!subtitle.characters.some((char) => char.opacity < 1) ||
+        !subtitle.splitCharacters.some((word) =>
+          word.some((char) => char.opacity < 1)
+        ))
+    if (!isAnimationComplete) {
       window.requestAnimationFrame(drawFrame)
     }
   }
