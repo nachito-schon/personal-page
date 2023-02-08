@@ -13,8 +13,8 @@ export const About = ({ buttonHandler, isSliding }: Props) => {
 
   return (
     <div className="h-full overflow-auto">
-      <div className="w-3/5 m-auto my-24 flex flex-col relative justify-center gap-3 text-justify indent-12 leading-normal text-white text-3xl tracking-wide">
-        <h1 className="pt-12 pb-2 self-start indent-0 text-5xl font-play-bold text-bright-green selection:text-white">
+      <div className="w-3/5 m-auto my-12 2xl:my-24 flex flex-col relative justify-center gap-3 text-justify indent-12 leading-normal text-white text-xl lg:text-2xl 2xl:text-3xl tracking-wide">
+        <h1 className="pt-12 pb-2 self-start indent-0 text-4xl lg:text-5xl font-play-bold text-bright-green selection:text-white">
           {dictionary.about.introduction.HEADER}
         </h1>
         <p>
@@ -24,7 +24,7 @@ export const About = ({ buttonHandler, isSliding }: Props) => {
           </span>
           {dictionary.about.introduction.TEXT[1]}
         </p>
-        <h1 className="pt-12 pb-2 self-start indent-0 text-5xl font-play-bold text-bright-green selection:text-white">
+        <h1 className="pt-12 pb-2 self-start indent-0 text-4xl lg:text-5xl font-play-bold text-bright-green selection:text-white">
           {dictionary.about.experience.HEADER}
         </h1>
         <p>
@@ -58,7 +58,7 @@ export const About = ({ buttonHandler, isSliding }: Props) => {
           </a>
           {dictionary.about.experience.TEXT[5]}
         </p>
-        <h1 className="pt-12 pb-2 self-start indent-0 text-5xl font-play-bold text-bright-green selection:text-white">
+        <h1 className="pt-12 pb-2 self-start indent-0 text-4xl lg:text-5xl font-play-bold text-bright-green selection:text-white">
           {dictionary.about.motivations.HEADER}
         </h1>
         <p>{dictionary.about.motivations.TEXT[0]}</p>

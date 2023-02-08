@@ -136,10 +136,10 @@
 
 @media (max-width: 768px) {
   .left-nav-button {
-    writing-mode: sideways-rl;
+    transform: rotate(90deg);
   }
 
   .right-nav-button {
-    writing-mode: sideways-lr;
+    transform: rotate(270deg);
   }
 }

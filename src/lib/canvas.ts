@@ -161,7 +161,7 @@ export const makeTitleAnimation = (
     draw: () => {
       context.fillStyle = `rgba(255, 255, 255, ${title.opacity})`
       context.filter = `blur(${title.blur}px)`
-      if (canvas.width > 500) {
+      if (window.innerWidth > 768) {
         context.font = `${title.size}px Roboto`
         context.fillText(title.text, 0, Math.round(canvas.height / 2))
       } else {
@@ -191,16 +191,17 @@ export const makeTitleAnimation = (
       character,
       opacity: -0.5 - 0.1 * randomSequence[index],
     })),
-    splitCharacters: subtitleText.split(' ').map((word) =>
+    splitCharacters: subtitleText.split(' ').map((word, wordIndex, words) =>
       word.split('').map((character, index) => ({
         character,
-        opacity: -0.5 - 0.1 * randomSequence[index],
+        opacity:
+          -0.5 - 0.1 * randomSequence[index + wordIndex * words[0].length],
       }))
     ),
     size: language === 'en' ? title.size / 2 : title.size / 2.55,
     draw: () => {
       context.filter = 'none'
-      if (canvas.width > 500) {
+      if (window.innerWidth > 768) {
         context.font = `${subtitle.size}px Play Bold`
         subtitle.characters.reduce((offset, char) => {
           context.fillStyle = `rgba(30, 255, 97, ${char.opacity})`
@@ -247,7 +248,7 @@ export const makeTitleAnimation = (
       }
     },
     update: () => {
-      if (canvas.width > 500) {
+      if (window.innerWidth > 768) {
         subtitle.characters.forEach((char) => {
           if (char.opacity < 1) {
             char.opacity += 0.01

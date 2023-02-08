@@ -16,7 +16,7 @@ export const BorderLightButton = ({
   return (
     <div
       onClick={onClick}
-      className="group absolute z-20 cursor-pointer"
+      className="group absolute z-20 cursor-pointer overflow-hidden"
       style={
         position === 'top'
           ? { top: '0px', width: '100%', height: '16.6%' }
