@@ -1,5 +1,8 @@
+import { useEffect, useRef, useState } from 'react'
+
 type Props = {
   image: string
+  smallImage?: string
   title: string
   description: string
   firstButtonText: string
@@ -11,6 +14,7 @@ type Props = {
 
 export const ProjectBlock = ({
   image,
+  smallImage,
   title,
   description,
   firstButtonText,
@@ -19,15 +23,46 @@ export const ProjectBlock = ({
   secondButtonLink,
   className,
 }: Props) => {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [isOnScreen, setIsOnScreen] = useState(false)
+  const checkViewport = () => {
+    if (containerRef.current) {
+      const boundingRectangle = containerRef.current.getBoundingClientRect()
+      if (
+        boundingRectangle.top >= 0 &&
+        boundingRectangle.bottom <= window.innerHeight
+      ) {
+        setIsOnScreen(true)
+      } else {
+        setIsOnScreen(false)
+      }
+    }
+  }
+
+  useEffect(() => {
+    const intervalID = setInterval(checkViewport, 500)
+    return () => clearInterval(intervalID)
+  }, [])
+
   return (
-    <div className={className}>
-      <div className="relative group">
+    <div className={className} ref={containerRef}>
+      <div className="relative  grow-0 shrink-0 h-min w-[300px] sm:w-[400px] xl:w-[500px] 2xl:w-[700px]">
         <img
-          className="shadow-tl shadow-bright-blue group-hover:shadow-light-bright-blue transition duration-500"
+          className="w-full transition duration-500"
+          style={{
+            boxShadow: isOnScreen
+              ? '-10px -10px 35px 0px #8e5fff'
+              : '-10px -10px 35px 0px #773dff',
+          }}
+          srcSet={`${smallImage} 400w, ${image} 800w`}
+          sizes="(max-width: 1280px) 400px, 800px"
           src={image}
           alt={title}
         />
-        <div className="absolute top-0 w-full h-full text-3xl font-bold text-center flex gap-3 p-6 bg-transp-bright-blue opacity-0 group-hover:opacity-100 transition duration-500">
+        <div
+          className="absolute top-0 w-full h-full text-lg sm:text-xl xl:text-3xl font-bold text-center flex gap-3 p-3 lg:p-6 bg-transp-bright-blue transition duration-500"
+          style={{ opacity: isOnScreen ? 1 : 0 }}
+        >
           <a
             href={firstButtonLink}
             target="_blank"
@@ -48,11 +83,13 @@ export const ProjectBlock = ({
           ) : null}
         </div>
       </div>
-      <div className="flex flex-col items-start gap-6 grow">
-        <h1 className="text-7xl font-play-bold text-bright-green selection:text-white">
+      <div className="flex flex-col text-center lg:text-left items-center lg:items-start gap-6 grow">
+        <h1 className="text-3xl lg:text-5xl 2xl:text-7xl font-play-bold text-bright-green selection:text-white">
           {title}
         </h1>
-        <p className="text-white text-3xl tracking-wide">{description}</p>
+        <p className="text-white text-xl lg:text-2xl 2xl:text-3xl tracking-wide">
+          {description}
+        </p>
       </div>
     </div>
   )
