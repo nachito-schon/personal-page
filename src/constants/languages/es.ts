@@ -10,30 +10,30 @@ export const es = {
     introduction: {
       HEADER: '¡Hola!',
       TEXT: [
-        'Me llamo Ignacio. Soy un programador ',
-        ' buscando comenzar mi carrera profesional en desarrollo web',
+        'Soy Ignacio, un programador nacido en ',
+        ' entusiasmado por comenzar mi carrera profesional como desarrollador web.',
       ],
-      HIGHLIGHTED_TEXT: 'argentino',
+      HIGHLIGHTED_TEXT: 'argentina',
     },
     experience: {
       HEADER: 'Mi experiencia',
       TEXT: [
         'Descubrí la ',
-        ' en la universidad, cuando estudiaba ingeniería electrónica. Aprendí lo básico sobre algoritmos, bases de datos y programación en C, y me dí cuenta que disfrutaba mucho del pensamiento lógico y el proceso de escribir código.',
-        'Eventualmente, conocí sobre el desarrollo web y empecé a seguir el curso de ',
+        ' cuando estudiaba ingeniería electrónica en la universidad. Aprendí lo básico de algoritmos, bases de datos y el lenguaje C, y me dí cuenta que disfrutaba mucho del proceso lógico de escribir el código de un programa.',
+        'Eventualmente, me interesé en el desarrollo web y empecé a seguir el curso de ',
         '.',
-        'Más adelante, con el avance de mi aprendizaje, me uní a un proyecto como parte de un pequeño equipo. Ayudé, siendo el único programador, a llevar a cabo un ',
-        ' que recibe más de mil visitas por día.',
+        'Más adelante, con el avance en mi aprendizaje, me uní a un proyecto como parte de un pequeño equipo, en el que ayudé, siendo el único programador, a llevar a cabo un ',
+        ' basado en la web que actualmente recibe más de mil visitas por día.',
       ],
       HIGHLIGHTED_TEXT: 'programación',
-      LINK: ['The Odin Project', 'video-juego web'],
+      LINK: ['The Odin Project', 'video-juego'],
     },
     motivations: {
       HEADER: 'Motivación',
       TEXT: [
-        'Soy una persona naturalmente creativa, me apasiona el arte en casi todas sus formas, hecho que siempre influye, de una forma u otra, en mis trabajos.',
-        'El desarrollo web permite que pueda expresar esta ',
-        ', ya sea teniendo que encontrar soluciones ingeniosas a problemas lógicos, o a través del diseño visual de una aplicación.',
+        'Soy una persona creativa por naturaleza, me apasiona el arte en casi todas sus formas, hecho que siempre influye en la forma en que trabajo en mis proyectos.',
+        'El desarrollo web me permite expresar esta ',
+        ', ya sea a la hora de ingeniar soluciones para problemas lógicos, o a través del diseño visual de una aplicación.',
       ],
       HIGHLIGHTED_TEXT: 'creatividad',
     },
@@ -41,26 +41,27 @@ export const es = {
   projects: {
     goats: {
       TITLE: 'GOATS',
-      DESCRIPTION: 'Un juego deportivo de adivinanzas.',
+      DESCRIPTION:
+        'Un juego donde hay que adivinar el personaje oculto del día.',
     },
     battleship: {
       TITLE: 'Battleship',
       DESCRIPTION:
-        'Una versión para un jugador del clásico juego de batalla naval, con una IA rival.',
+        'Una versión para un jugador del clásico juego de batalla naval, con una IA como rival.',
     },
     memoryCards: {
       TITLE: 'Memory card game',
       DESCRIPTION:
-        'Un juego de memoria en el que hay que evitar clickear en la misma imagen dos veces.',
+        'Un juego de memoria en el que hay que evitar clickear la misma imagen dos veces.',
     },
     toDo: {
       TITLE: 'To-do list',
       DESCRIPTION:
-        'Una web-app para crear listas de tareas, especificando fecha e importancia.',
+        'Una web-app para crear listas de quehaceres, pudiendo especificar fecha e importancia.',
     },
     buttons: {
       VISIT_PAGE: 'VISITAR PÁGINA WEB',
-      LIVE_PREVIEW: 'PRUEBA EN VIVO',
+      LIVE_PREVIEW: 'PROBAR APLICACIÓN',
       GITHUB_PAGE: 'PÁGINA DE GITHUB',
     },
   },
