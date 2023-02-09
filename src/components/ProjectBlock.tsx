@@ -46,7 +46,7 @@ export const ProjectBlock = ({
 
   return (
     <div className={className} ref={containerRef}>
-      <div className="relative  grow-0 shrink-0 h-min w-[300px] sm:w-[400px] xl:w-[500px] 2xl:w-[700px]">
+      <div className="relative select-none grow-0 shrink-0 h-min w-[300px] sm:w-[400px] xl:w-[500px] 2xl:w-[700px]">
         <img
           className="w-full transition duration-500"
           style={{

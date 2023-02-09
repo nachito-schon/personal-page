@@ -24,6 +24,15 @@
   font-style: normal;
 }
 
+input,
+textarea,
+button,
+select,
+div,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .left-gradient {
   background-image: radial-gradient(
     ellipse 100% 60% at 0% 50%,

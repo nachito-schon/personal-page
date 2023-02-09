@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import { useSwipeable } from 'react-swipeable'
 import { GOATS_URL, THE_ODIN_PROJECT_URL } from '../constants/settings'
 import { LanguageContext } from '../context/LanguageContext'
 import { BorderLightButton } from './BorderLightButton'
@@ -10,9 +11,13 @@ type Props = {
 
 export const About = ({ buttonHandler, isSliding }: Props) => {
   const dictionary = useContext(LanguageContext).dictionary
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: buttonHandler,
+    swipeDuration: 500,
+  })
 
   return (
-    <div className="h-full overflow-auto">
+    <div className="h-full overflow-auto" {...swipeHandlers}>
       <div className="w-3/5 m-auto my-12 2xl:my-24 flex flex-col relative justify-center gap-3 text-justify indent-12 leading-normal text-white text-xl lg:text-2xl 2xl:text-3xl tracking-wide">
         <h1 className="pt-12 pb-2 self-start indent-0 text-4xl lg:text-5xl font-play-bold text-bright-green selection:text-white">
           {dictionary.about.introduction.HEADER}

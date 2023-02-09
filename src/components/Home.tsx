@@ -27,7 +27,9 @@ export const Home = ({
     onSwipedRight: leftButtonHandler,
     onSwipedLeft: rightButtonHandler,
     onSwipedUp: bottomButtonHandler,
+    swipeDuration: 500,
   })
+
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     setMousePosition({
