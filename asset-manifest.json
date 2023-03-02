@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.72be0570.css",
+    "main.js": "/static/js/main.babbd657.js",
+    "static/js/787.c0841a6b.chunk.js": "/static/js/787.c0841a6b.chunk.js",
+    "static/media/memory-cards-preview-800w.png": "/static/media/memory-cards-preview-800w.10ec3b1dcd7a659677ec.png",
+    "static/media/Play-Bold.ttf": "/static/media/Play-Bold.b78f3be6adabf73cde7f.ttf",
+    "static/media/Play-Regular.ttf": "/static/media/Play-Regular.e0424c5771f87080b05e.ttf",
+    "static/media/Roboto-Thin.ttf": "/static/media/Roboto-Thin.a732a12eb07742232407.ttf",
+    "static/media/memory-cards-preview-400w.png": "/static/media/memory-cards-preview-400w.1c171231c5041a64773d.png",
+    "static/media/RubikMonoOne-Regular.ttf": "/static/media/RubikMonoOne-Regular.bca8f5015b00e4514972.ttf",
+    "static/media/goats-preview-800w.png": "/static/media/goats-preview-800w.8fea780792366fe5c4cf.png",
+    "static/media/goats-preview-400w.png": "/static/media/goats-preview-400w.562619205b0fd62364f4.png",
+    "static/media/to-do-preview-800w.png": "/static/media/to-do-preview-800w.c7feecab972c40b941a3.png",
+    "static/media/battleship-preview-800w.png": "/static/media/battleship-preview-800w.010d19d18f3db83bea86.png",
+    "static/media/battleship-preview-400w.png": "/static/media/battleship-preview-400w.36782f433687868236f1.png",
+    "index.html": "/index.html",
+    "main.72be0570.css.map": "/static/css/main.72be0570.css.map",
+    "main.babbd657.js.map": "/static/js/main.babbd657.js.map",
+    "787.c0841a6b.chunk.js.map": "/static/js/787.c0841a6b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.72be0570.css",
+    "static/js/main.babbd657.js"
+  ]
+}
