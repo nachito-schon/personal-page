@@ -3,6 +3,8 @@ import { useSwipeable } from 'react-swipeable'
 import { LanguageContext } from '../context/LanguageContext'
 import { BorderLightButton } from './BorderLightButton'
 import { Title } from './Title'
+import smallProfilePhoto from '../images/profile-photo-450w.png'
+import bigProfilePhoto from '../images/profile-photo-750w.png'
 
 type Props = {
   leftButtonHandler: () => void
@@ -44,6 +46,21 @@ export const Home = ({
       {...swipeHandlers}
       onMouseMove={handleMouseMove}
     >
+      <img
+        style={{
+          position: 'absolute',
+          bottom: -mousePosition.y / 150,
+          left: mousePosition.x / 150,
+          transitionProperty: 'all',
+          transitionDuration: '1s',
+          transitionTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+        }}
+        className="grayscale opacity-50 brightness-90 hover:opacity-75 hover:brightness-100 hover:grayscale-0"
+        srcSet={`${smallProfilePhoto} 450w, ${bigProfilePhoto} 750w`}
+        sizes="(max-width: 1280px) 450px, 750px"
+        src={bigProfilePhoto}
+        alt={'Profile'}
+      />
       <Title
         style={{
           position: 'relative',
