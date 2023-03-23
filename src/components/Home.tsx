@@ -47,17 +47,9 @@ export const Home = ({
       onMouseMove={handleMouseMove}
     >
       <img
-        style={{
-          position: 'absolute',
-          bottom: -mousePosition.y / 150,
-          left: mousePosition.x / 150,
-          transitionProperty: 'all',
-          transitionDuration: '1s',
-          transitionTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
-        }}
-        className="grayscale opacity-50 brightness-90 hover:opacity-75 hover:brightness-100 hover:grayscale-0"
+        className="absolute bottom-0 left-0 h-[90vh] object-cover md:h-auto max-h-full max-w-full grayscale opacity-50 brightness-90 hover:opacity-75 hover:brightness-100 hover:grayscale-0 duration-1000 ease-out fade-in"
         srcSet={`${smallProfilePhoto} 450w, ${bigProfilePhoto} 750w`}
-        sizes="(max-width: 1280px) 450px, 750px"
+        sizes="(max-width: 768px) 450px, 750px"
         src={bigProfilePhoto}
         alt={'Profile'}
       />

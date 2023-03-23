@@ -57,7 +57,11 @@ export const Title = ({ title, subtitle, style, language }: Props) => {
   }, [title, subtitle])
 
   return (
-    <canvas style={style} className="m-auto" ref={canvasRef}>
+    <canvas
+      style={style}
+      className="mb-24 mr-16 mt-auto ml-auto md:m-auto"
+      ref={canvasRef}
+    >
       <h1 className="text-8xl tracking-wide -translate-x-12">{title}</h1>
       <h2 className="text-5xl font-play-bold tracking-widest text-bright-green translate-x-16">
         {subtitle}
