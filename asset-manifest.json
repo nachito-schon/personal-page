@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/personal-page/static/css/main.c39c4b3a.css",
-    "main.js": "/personal-page/static/js/main.59a15d47.js",
+    "main.css": "/personal-page/static/css/main.5bf33b30.css",
+    "main.js": "/personal-page/static/js/main.264ab423.js",
     "static/js/787.c0841a6b.chunk.js": "/personal-page/static/js/787.c0841a6b.chunk.js",
     "static/media/memory-cards-preview-800w.png": "/personal-page/static/media/memory-cards-preview-800w.10ec3b1dcd7a659677ec.png",
     "static/media/profile-photo-750w.png": "/personal-page/static/media/profile-photo-750w.2ce76f9ab67da0144edb.png",
@@ -17,12 +17,12 @@
     "static/media/battleship-preview-800w.png": "/personal-page/static/media/battleship-preview-800w.010d19d18f3db83bea86.png",
     "static/media/battleship-preview-400w.png": "/personal-page/static/media/battleship-preview-400w.36782f433687868236f1.png",
     "index.html": "/personal-page/index.html",
-    "main.c39c4b3a.css.map": "/personal-page/static/css/main.c39c4b3a.css.map",
-    "main.59a15d47.js.map": "/personal-page/static/js/main.59a15d47.js.map",
+    "main.5bf33b30.css.map": "/personal-page/static/css/main.5bf33b30.css.map",
+    "main.264ab423.js.map": "/personal-page/static/js/main.264ab423.js.map",
     "787.c0841a6b.chunk.js.map": "/personal-page/static/js/787.c0841a6b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c39c4b3a.css",
-    "static/js/main.59a15d47.js"
+    "static/css/main.5bf33b30.css",
+    "static/js/main.264ab423.js"
   ]
 }
