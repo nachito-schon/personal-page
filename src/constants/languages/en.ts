@@ -11,16 +11,16 @@ export const en = {
       HEADER: 'Hi!',
       TEXT: [
         'My name is Ignacio. I am an ',
-        ' developer looking to start my professional career in web development.',
+        ' developer hungry for new challenges, willing to grow as a proffesional in the IT world.',
       ],
       HIGHLIGHTED_TEXT: 'argentinian',
     },
     experience: {
-      HEADER: 'My experience',
+      HEADER: 'My story',
       TEXT: [
         'I first got into ',
-        ' in college, as I was studying electronic engineering. I learned the basics of algorithms, databases and C language, and really enjoyed the logic process of writing code.',
-        'Eventually, I found out about web development and started following ',
+        ' in college, as I was studying electronic engineering. I learned the basics of algorithms, databases and C language, and really came to enjoy the logic process of writing code.',
+        'Eventually, I found out about web development and put engineering aside to start following ',
         "'s curriculum.",
         'Later on in my learning course, I got into a project as part of a small team. As the only developer, I helped bring a ',
         ' with more than a thousand visits per day to reality.',
@@ -31,7 +31,7 @@ export const en = {
     motivations: {
       HEADER: 'Motivations',
       TEXT: [
-        "I'm a creative, I am passionate about art in most of its forms, fact which often subtly finds, in one way or another, its way into my work.",
+        'I am a creative and I am passionate about art in most of its forms, fact which always finds, in one way or another, its way into my work.',
         'Web development allows me to express this ',
         ", be it by finding clever and efficient solutions to logic problems, or through the styling of an app's layout.",
       ],

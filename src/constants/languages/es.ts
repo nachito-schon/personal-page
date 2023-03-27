@@ -11,16 +11,16 @@ export const es = {
       HEADER: '¡Hola!',
       TEXT: [
         'Soy Ignacio, un programador nacido en ',
-        ' entusiasmado por comenzar mi carrera profesional como desarrollador web.',
+        ' hambriento de nuevos desafíos, buscando crecer profesionalmente en el mundo de la tecnología de la información.',
       ],
       HIGHLIGHTED_TEXT: 'argentina',
     },
     experience: {
-      HEADER: 'Mi experiencia',
+      HEADER: 'Mi historia',
       TEXT: [
         'Descubrí la ',
-        ' cuando estudiaba ingeniería electrónica en la universidad. Aprendí lo básico de algoritmos, bases de datos y el lenguaje C, y me dí cuenta que disfrutaba mucho del proceso lógico de escribir el código de un programa.',
-        'Eventualmente, me interesé en el desarrollo web y empecé a seguir el curso de ',
+        ' cuando estudiaba ingeniería electrónica en la universidad. Aprendí lo básico de algoritmos, bases de datos y el lenguaje C, y me dí cuenta que disfrutaba mucho del proceso lógico de escribir código.',
+        'Eventualmente, me interesé en el desarrollo web, dejé de lado la ingeniería y empecé a seguir el curso de ',
         '.',
         'Más adelante, con el avance en mi aprendizaje, me uní a un proyecto como parte de un pequeño equipo, en el que ayudé, siendo el único programador, a llevar a cabo un ',
         ' basado en la web que actualmente recibe más de mil visitas por día.',
@@ -31,7 +31,7 @@ export const es = {
     motivations: {
       HEADER: 'Motivación',
       TEXT: [
-        'Soy una persona creativa por naturaleza, me apasiona el arte en casi todas sus formas, hecho que siempre influye en la forma en que trabajo en mis proyectos.',
+        'Soy una persona creativa por naturaleza y me apasiona el arte en casi todas sus formas, hecho que siempre influye en la forma en que trabajo en mis proyectos.',
         'El desarrollo web me permite expresar esta ',
         ', ya sea a la hora de ingeniar soluciones para problemas lógicos, o a través del diseño visual de una aplicación.',
       ],
