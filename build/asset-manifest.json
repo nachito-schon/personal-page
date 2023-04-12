@@ -1,26 +1,30 @@
 {
   "files": {
-    "main.css": "/personal-page/static/css/main.b258b8ad.css",
-    "main.js": "/personal-page/static/js/main.10c92e7f.js",
+    "main.css": "/personal-page/static/css/main.5bf33b30.css",
+    "main.js": "/personal-page/static/js/main.755b3659.js",
     "static/js/787.c0841a6b.chunk.js": "/personal-page/static/js/787.c0841a6b.chunk.js",
     "static/media/memory-cards-preview-800w.png": "/personal-page/static/media/memory-cards-preview-800w.10ec3b1dcd7a659677ec.png",
+    "static/media/profile-photo-750w.png": "/personal-page/static/media/profile-photo-750w.2ce76f9ab67da0144edb.png",
+    "static/media/profile-photo-450w.png": "/personal-page/static/media/profile-photo-450w.252f0a07754aed4e7934.png",
     "static/media/Play-Bold.ttf": "/personal-page/static/media/Play-Bold.b78f3be6adabf73cde7f.ttf",
     "static/media/Play-Regular.ttf": "/personal-page/static/media/Play-Regular.e0424c5771f87080b05e.ttf",
     "static/media/Roboto-Thin.ttf": "/personal-page/static/media/Roboto-Thin.a732a12eb07742232407.ttf",
     "static/media/memory-cards-preview-400w.png": "/personal-page/static/media/memory-cards-preview-400w.1c171231c5041a64773d.png",
     "static/media/RubikMonoOne-Regular.ttf": "/personal-page/static/media/RubikMonoOne-Regular.bca8f5015b00e4514972.ttf",
+    "static/media/personal-page-preview-800w.png": "/personal-page/static/media/personal-page-preview-800w.46b33d0b3f4d575f17d3.png",
     "static/media/goats-preview-800w.png": "/personal-page/static/media/goats-preview-800w.8fea780792366fe5c4cf.png",
     "static/media/goats-preview-400w.png": "/personal-page/static/media/goats-preview-400w.562619205b0fd62364f4.png",
+    "static/media/personal-page-preview-400w.png": "/personal-page/static/media/personal-page-preview-400w.74fb44229f473101dc7a.png",
     "static/media/to-do-preview-800w.png": "/personal-page/static/media/to-do-preview-800w.c7feecab972c40b941a3.png",
     "static/media/battleship-preview-800w.png": "/personal-page/static/media/battleship-preview-800w.010d19d18f3db83bea86.png",
     "static/media/battleship-preview-400w.png": "/personal-page/static/media/battleship-preview-400w.36782f433687868236f1.png",
     "index.html": "/personal-page/index.html",
-    "main.b258b8ad.css.map": "/personal-page/static/css/main.b258b8ad.css.map",
-    "main.10c92e7f.js.map": "/personal-page/static/js/main.10c92e7f.js.map",
+    "main.5bf33b30.css.map": "/personal-page/static/css/main.5bf33b30.css.map",
+    "main.755b3659.js.map": "/personal-page/static/js/main.755b3659.js.map",
     "787.c0841a6b.chunk.js.map": "/personal-page/static/js/787.c0841a6b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b258b8ad.css",
-    "static/js/main.10c92e7f.js"
+    "static/css/main.5bf33b30.css",
+    "static/js/main.755b3659.js"
   ]
 }

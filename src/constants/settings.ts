@@ -3,6 +3,8 @@ export const LINKEDIN_URL =
   'https://www.linkedin.com/in/ignacio-schonfeld-07aa68140/'
 export const EMAIL_URL = 'mailto:ignacioschonfeld@gmail.com'
 export const THE_ODIN_PROJECT_URL = 'https://www.theodinproject.com/'
+export const PERSONAL_PAGE_GITHUB_URL =
+  'https://github.com/nachito-schon/personal-page'
 export const GOATS_URL = 'https://goats-game.com/'
 export const BATTLESHIP_PREVIEW_URL =
   'https://nachito-schon.github.io/battleship/'

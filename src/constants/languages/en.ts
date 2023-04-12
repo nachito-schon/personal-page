@@ -39,6 +39,10 @@ export const en = {
     },
   },
   projects: {
+    personalPage: {
+      TITLE: 'PERSONAL PAGE',
+      DESCRIPTION: 'This same page... I built it myself!',
+    },
     goats: {
       TITLE: 'GOATS',
       DESCRIPTION: 'A guessing sports game.',
