@@ -12,4 +12,4 @@ Although styling wise it's fully responisve, it stands out on desktop devices fo
 
 **[VISIT IT](https://nachito-schon.github.io/personal-page/)**
 
-![personal-page](https://user-images.githubusercontent.com/85847402/227748114-475a4404-5340-44f1-832b-0840c2fe60f3.png)
+![personal-page](https://user-images.githubusercontent.com/85847402/233860746-44c9f5d5-bd33-4648-b2f9-8f68491aedaa.jpg)
